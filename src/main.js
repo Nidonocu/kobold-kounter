@@ -35,9 +35,9 @@ const createWindow = async () => {
         mainWindow = null;
     });
 
-    mainWindow.on('ready', () => {
+    mainWindow.once('ready-to-show', () => {
         mainWindow.show();
-    })
+    });
 };
 
 // This method will be called when Electron has finished

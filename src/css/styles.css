@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Q-Reg;
+    src: url('fonts/Questrial-Regular.ttf');
+}
+
+body {
+    background-color: darkolivegreen;
+    color: whitesmoke;
+    font-family: Q-Reg;
+}
