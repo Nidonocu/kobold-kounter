@@ -2,9 +2,20 @@
     font-family: Q-Reg;
     src: url('fonts/Questrial-Regular.ttf');
 }
+@font-face {
+    font-family: LCD;
+    src: url('fonts/Open24DisplaySt.ttf');
+}
 
 body {
-    background-color: darkolivegreen;
+    background-color: rgb(18, 116, 196);
     color: whitesmoke;
     font-family: Q-Reg;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+button {
+    border-radius: 0px !important;
 }

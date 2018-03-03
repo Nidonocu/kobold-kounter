@@ -2,20 +2,30 @@ import { app, BrowserWindow } from 'electron';
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
 
+if(require('electron-squirrel-startup')) app.quit();
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 const isDevMode = process.execPath.match(/[\\/]electron/);
 
-if (isDevMode) enableLiveReload();
+if (isDevMode) {
+    enableLiveReload();
+    var setFull = false;
+}
+else {
+    var setFull = true;
+}
 
 const createWindow = async () => {
     // Create the browser window.
         mainWindow = new BrowserWindow({
-        width: 1600,
-        height: 900,
-        show: false
+        width: 1366,
+        height: 768,
+        show: false,
+        frame: false,
+        fullscreen: setFull
     });
 
     // and load the index.html of the app.

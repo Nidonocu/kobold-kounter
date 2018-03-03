@@ -1,4 +1,10 @@
-import Vue from 'vue';
-import App from './app/App';
+require('jquery');
+require('popper.js');
+require('bootstrap');
 
-const app = new Vue(App).$mount('#app');
+window.$ = window.jQuery = module.exports;
+
+import Vue from 'vue';
+import Kobold from './app/Kobold';
+
+const koboldApp = new Vue(Kobold).$mount('#app');
